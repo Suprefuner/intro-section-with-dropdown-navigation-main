@@ -1,0 +1,112 @@
+@use "../abstract/variables" as *;
+
+%hover {
+  box-sizing: border-box;
+  color: $color-black;
+  background-color: $color-white;
+  border: 1px solid $color-black;
+}
+
+.btn {
+  border: none;
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+
+  font-size: 1.6rem;
+  font-weight: $fw-bold;
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  &--light {
+    background-color: #fff;
+    border: 1px solid $color-white;
+    color: $color-gray;
+
+    &:active {
+      outline: 2px solid black;
+    }
+
+    &:hover {
+      @extend %hover;
+    }
+  }
+
+  &--dark {
+    border: 1px solid $color-black;
+    background-color: $color-black;
+    color: $color-white;
+
+    &:hover {
+      @extend %hover;
+    }
+  }
+
+  &-meun,
+  &-close {
+    position: absolute;
+    right: 2rem;
+
+    width: 3.5rem;
+    height: 2px;
+
+    border: none;
+
+    transition: 0.3s;
+  }
+
+  &-meun {
+    top: 2.7rem;
+
+    background-color: $color-black;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+
+      width: 3.5rem;
+      height: 2px;
+
+      background-color: $color-black;
+
+      transform: rotate(0);
+    }
+
+    &:before {
+      top: -0.9rem;
+    }
+
+    &:after {
+      top: 0.9rem;
+    }
+  }
+
+  &-close {
+    top: 3rem;
+
+    background-color: transparent;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 3.5rem;
+      height: 2px;
+
+      background-color: $color-black;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}

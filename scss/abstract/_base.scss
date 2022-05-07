@@ -1,0 +1,54 @@
+@use "variables" as *;
+// @use "./variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  font-size: 1.6rem;
+  font-family: $font-display;
+
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (min-width: $bp-mobile) {
+    background-color: $color-white;
+  }
+}
+
+.container {
+  max-width: 120rem;
+  overflow: hidden;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 110;
+}
+
+.hidden {
+  display: none;
+}

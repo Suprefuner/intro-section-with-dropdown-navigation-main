@@ -1,0 +1,15 @@
+@use "../abstract/variables" as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @media only screen and (min-width: $bp-mobile) {
+    justify-content: start;
+  }
+
+  &__logo {
+    transform: scale(0.75);
+  }
+}
