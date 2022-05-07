@@ -2,10 +2,10 @@
   "name": "intro-section-with-dropdown-navigation-main",
   "version": "1.0.0",
   "description": "![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "keywords": [],
   "author": "",
