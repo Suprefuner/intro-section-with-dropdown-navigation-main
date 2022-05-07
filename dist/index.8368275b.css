@@ -1,0 +1,361 @@
+@import "https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap";
+.header {
+  width: 100%;
+  align-items: center;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+}
+
+.nav {
+  z-index: 200;
+  width: 65%;
+  height: 100vh;
+  background-color: #fafafa;
+  padding: 6rem 2rem;
+  transition: all .3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+
+@media only screen and (min-width: 23.5em) {
+  .nav {
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    padding: 0 0 0 5rem;
+    display: flex;
+    position: relative;
+    transform: translate(0);
+  }
+}
+
+@media only screen and (min-width: 23.5em) {
+  .nav__list {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.nav__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 23.5em) {
+  .nav__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 3rem;
+    position: relative;
+  }
+}
+
+.nav__item:hover .nav__link {
+  color: #141414;
+}
+
+.nav__item-arrow {
+  width: 1rem;
+  aspect-ratio: 1;
+  background-color: #696969;
+  margin-left: .5rem;
+  transition: all .2s;
+  display: inline-block;
+  -webkit-mask-image: url("icon-arrow-down.deff4496.svg");
+  mask-image: url("icon-arrow-down.deff4496.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.nav__item:hover .nav__item-arrow {
+  background-color: #141414;
+}
+
+.nav__item .nav__list--inner {
+  opacity: 0;
+  max-height: 0;
+  margin: 2rem;
+  transition: max-height .5s, opacity .3s;
+  display: none;
+  overflow: hidden;
+}
+
+.nav__item .nav__list--inner .nav__item--inner:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.nav__item .nav__list--inner .nav__link--inner:link, .nav__item .nav__list--inner .nav__link--inner:visited {
+  color: #696969;
+}
+
+@media only screen and (min-width: 23.5em) {
+  .nav__item .nav__list--inner {
+    background-color: #fafafa;
+    border-radius: 15px;
+    padding: 2rem;
+    position: absolute;
+    box-shadow: 0 0 2rem #14141433;
+  }
+}
+
+.nav__item .features-inner {
+  width: 180%;
+  top: 1rem;
+  right: -2rem;
+}
+
+.nav__item .company-inner {
+  width: 130%;
+  top: 1rem;
+  left: -2rem;
+}
+
+.nav__item-icon {
+  vertical-align: top;
+  margin-right: .5rem;
+}
+
+.nav__link:link, .nav__link:visited {
+  color: #696969;
+  transition: all .2s;
+}
+
+.btn-meun, .btn-meun:before, .btn-meun:after, .btn-close:before, .btn-close:after, .btn-close {
+  z-index: 250;
+}
+
+@media only screen and (min-width: 23.5em) {
+  .btn-meun, .btn-meun:before, .btn-meun:after, .btn-close:before, .btn-close:after, .btn-close {
+    display: none;
+  }
+}
+
+.btn-group {
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  display: flex;
+}
+
+@media only screen and (min-width: 23.5em) {
+  .btn-group {
+    flex-direction: row;
+    margin-top: 0;
+  }
+}
+
+.footer {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
+
+@media only screen and (min-width: 23.5em) {
+  .footer {
+    justify-content: start;
+  }
+}
+
+.footer__logo {
+  transform: scale(.75);
+}
+
+@media only screen and (min-width: 23.5em) {
+  .main {
+    grid-template-columns: 5fr minmax(30rem, 4fr);
+    padding: 5rem 8rem 8rem;
+    display: grid;
+  }
+}
+
+.hero {
+  height: 28rem;
+  background-image: url("image-hero-mobile.4c761148.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
+
+@media only screen and (min-width: 23.5em) {
+  .hero {
+    height: 100%;
+    background-image: url("image-hero-desktop.03fcb46b.png");
+    background-position: center;
+    grid-area: 1 / 2 / 3 / -1;
+  }
+}
+
+.content {
+  text-align: center;
+  padding: 5rem 1rem 4rem;
+}
+
+@media only screen and (min-width: 23.5em) {
+  .content {
+    width: 82%;
+    text-align: left;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+.content > * + * {
+  margin-top: 3rem;
+}
+
+.btn--dark:hover, .btn--light:hover {
+  box-sizing: border-box;
+  color: #141414;
+  background-color: #fafafa;
+  border: 1px solid #141414;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: all .2s;
+}
+
+.btn--light {
+  color: #696969;
+  background-color: #fff;
+  border: 1px solid #fafafa;
+}
+
+.btn--light:active {
+  outline: 2px solid #000;
+}
+
+.btn--dark {
+  color: #fafafa;
+  background-color: #141414;
+  border: 1px solid #141414;
+}
+
+.btn-meun, .btn-close {
+  width: 3.5rem;
+  height: 2px;
+  border: none;
+  transition: all .3s;
+  position: absolute;
+  right: 2rem;
+}
+
+.btn-meun {
+  background-color: #141414;
+  top: 2.7rem;
+}
+
+.btn-meun:before, .btn-meun:after {
+  content: "";
+  width: 3.5rem;
+  height: 2px;
+  transform: rotate(0);
+  background-color: #141414;
+  position: absolute;
+  right: 0;
+}
+
+.btn-meun:before {
+  top: -.9rem;
+}
+
+.btn-meun:after {
+  top: .9rem;
+}
+
+.btn-close {
+  background-color: #0000;
+  top: 3rem;
+}
+
+.btn-close:before, .btn-close:after {
+  content: "";
+  width: 3.5rem;
+  height: 2px;
+  background-color: #141414;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn-close:before {
+  transform: rotate(45deg);
+}
+
+.btn-close:after {
+  transform: rotate(-45deg);
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  font-family: Epilogue, sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+}
+
+@media only screen and (min-width: 23.5em) {
+  body {
+    background-color: #fafafa;
+  }
+}
+
+.container {
+  max-width: 120rem;
+  overflow: hidden;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.background {
+  z-index: 110;
+  background-color: #00000080;
+  position: absolute;
+  inset: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.heading-1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 23.5em) {
+  .heading-1 {
+    font-size: 5rem;
+  }
+}
+
+p {
+  color: #696969;
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=index.8368275b.css.map */
